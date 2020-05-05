@@ -102,6 +102,7 @@ body footer {
 }
 
 css-doodle {
+  z-index: -1;
   --rule: ( :doodle {
     position: absolute;
     width: 100%;
@@ -161,7 +162,8 @@ css-doodle {
 }
 
 .candy {
-  display: block;
+  position: fixed;
+  top: 0;
   margin: 35px;
   overflow: hidden;
   width: 100px;
@@ -173,6 +175,7 @@ css-doodle {
   box-shadow: 40px 20px 15px -30px rgba(255, 0, 0, 0.1);
   -webkit-animation: PARTY 1s linear infinite;
   animation: PARTY 1s linear infinite;
+  z-index: -2;
 }
 
 .candy-loader {
