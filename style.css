@@ -33,26 +33,25 @@ body {
   overflow-x: hidden;
 }
 
-body .siteTitle {
+.siteTitleWrapper {
+  display: flex;
+  align-content: center;
+}
+
+.siteTitle {
   font-family: 'Pimlico Glow';
   font-variant: small-caps;
   display: -webkit-box;
   display: flex;
-  -webkit-box-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  justify-content: center;
-  align-content: center;
-  text-align: center;
+  margin: auto;
   font-weight: 400;
-  text-align: center;
   font-size: 15vw;
   font-variation-settings: 'GLOW' 0;
   color: rgba(255, 255, 255, 0.5);
   animation: textBounce 12s infinite 5s cubic-bezier(0, 0.03, 0.83, 1.41) both;
 }
 
-body .siteTitle::before {
+.siteTitle::before {
   content: attr(data-text);
   font-variation-settings: 'GLOW' 1000;
   -webkit-filter: invert(0.7) grayscale(1);
@@ -62,7 +61,7 @@ body .siteTitle::before {
   text-shadow: 16px 10px 5px rgba(255, 255, 255, 0.25), 8px 5px 5px rgba(138, 0, 0, 0.53);
 }
 
-body .siteTitle::after {
+.siteTitle::after {
   content: attr(data-text);
   position: absolute;
   z-index: 3;
